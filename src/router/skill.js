@@ -21,32 +21,32 @@ const baseUrl = '/skills'
 
 const userId = 2 // current user Id
 
-// Create {{{1
+// Create
 router.post(baseUrl, (req, res, next) => {
   res.json({
     id: 1
   })
 })
 
-// List {{{1
+// List
 router.get(baseUrl, (req, res, next) => {
   res.json(skillTable.map(addExtraProp(userId)))
 })
 
-// View {{{1
+// View
 router.get(baseUrl + '/:id', (req, res, next) => {
   const skillId = +req.params.id
   const skill = skillTable[skillId - 1]
   res.json(addExtraProp(userId)(skill))
 })
 
-// Vote {{{1
+// Vote
 router.post(baseUrl + '/:id/vote', (req, res, next) => {
   const skillId = +req.params.id
   res.json(levelCount(skillId))
 })
 
-//  Equip {{{1
+//  Equip
 router.post(baseUrl + '/:id/equip', (req, res, next) => {
   // TODO: insert or delete equip
   const equippedSkills = equipSkillTable
@@ -57,7 +57,7 @@ router.post(baseUrl + '/:id/equip', (req, res, next) => {
   res.json({ equippedSkills })
 })
 
-// Update {{{1
+// Update
 router.put(baseUrl + '/:id', (req, res, next) => {
   const skillId = +req.params.id
   const skill = skillTable[skillId - 1]
@@ -66,7 +66,7 @@ router.put(baseUrl + '/:id', (req, res, next) => {
   }))
 })
 
-// util {{{1
+// util
 
 function addExtraProp (userId) {
   return function (skill) {
@@ -118,9 +118,9 @@ function skillLevel (skillId, userId) {
   }
 }
 
-// }}}
+//
 
 module.exports = router
 
-// vim-modeline {{{1
-// vim:set et sw=2 ts=8 fdm=marker:
+// vim-modeline
+// vim:set et sw=2 ts=8 :

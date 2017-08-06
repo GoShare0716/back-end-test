@@ -1,4 +1,4 @@
-// createSkillTable {{{1
+// createSkillTable
 var createSkillTable = []
 fillData(
   createSkillTable,
@@ -10,7 +10,7 @@ fillData(
   ]
 )
 
-// voteSkillTable {{{1
+// voteSkillTable
 var voteSkillTable = []
 fillData(
   voteSkillTable,
@@ -25,7 +25,7 @@ fillData(
   ]
 )
 
-// equipSkillTable {{{1
+// equipSkillTable
 var equipSkillTable = []
 fillData(
   equipSkillTable,
@@ -38,7 +38,7 @@ fillData(
   ]
 )
 
-// createWorkshopTable {{{1
+// createWorkshopTable
 var createWorkshopTable = []
 fillData(
   createWorkshopTable,
@@ -50,7 +50,7 @@ fillData(
   ]
 )
 
-// attendWorkshopTable {{{1
+// attendWorkshopTable
 var attendWorkshopTable = []
 fillData(
   attendWorkshopTable,
@@ -63,7 +63,7 @@ fillData(
   ]
 )
 
-// utils {{{1
+// utils
 function fillData (table, colNames, rows) {
   for (let row of rows) {
     const N = colNames.length
@@ -83,7 +83,7 @@ function fillData (table, colNames, rows) {
   }
 }
 
-// Exports {{{1
+// Exports
 module.exports = {
   createSkillTable,
   voteSkillTable,
@@ -92,4 +92,4 @@ module.exports = {
   attendWorkshopTable
 }
 
-// vim:set et sw=2 ts=8 fdm=marker:
+// vim:set et sw=2 ts=8 :

@@ -17,7 +17,7 @@ const baseUrl = '/users'
 
 router.use(bodyParser.json())
 
-// View {{{1
+// View
 router.get(baseUrl + '/:id', (req, res, next) => {
   const userId = +req.params.id
   const belongToMe = item => item.userId === userId
@@ -50,17 +50,17 @@ router.get(baseUrl + '/:id', (req, res, next) => {
   ))
 })
 
-// Update {{{1
+// Update
 genUpdateApi('email')
 genUpdateApi('introduction')
 genUpdateApi('fbUrl')
 genUpdateApi('personalWebUrl')
 genUpdateApi('available')
 
-// API END {{{1
-// }}}
+// API END
+//
 
-// util {{{1
+// util
 
 function genUpdateApi (field) {
   router.put(`${baseUrl}/:id/${field}`, (req, res, next) => {
@@ -78,5 +78,5 @@ function genUpdateApi (field) {
 
 module.exports = router
 
-// vim-modeline {{{1
-// vim:set et sw=2 ts=8 fdm=marker:
+// vim-modeline
+// vim:set et sw=2 ts=8 :
